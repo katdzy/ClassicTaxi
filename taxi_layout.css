@@ -1,0 +1,410 @@
+/* Classic Taxi Styles*/
+:root {
+    --primary-yellow: #FFE600;
+    --text-dark: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+/* Body Styles*/
+body {
+    font-family: Epilogue, Geneva, Arial, Helvetica, sans-serif, sans-serif;
+    overflow-x: hidden;
+}
+/* Heading Styles*/
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: 20px auto 0;
+    padding: 1.3rem;
+    z-index: 10;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+}
+
+header img {
+    max-height: 30px;
+    cursor: pointer;
+}
+
+.navlinks {
+    list-style: none;
+}
+
+.navlinks li {
+    display: inline-block;
+    padding: 0 1.3rem;
+}
+
+.navlinks li a {
+    font-family: Epilogue, Geneva, Arial, Helvetica, sans-serif, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.contact-btn {
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+/* Hero Section */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.left-side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffee00;
+    clip-path: polygon(0 0, 65% 0, 45% 100%, 0 100%);
+    z-index: 1;
+}
+
+.right-side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/church-bg.png');
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.taxi {
+    position: absolute;
+    bottom: -5%;
+    left: 50vw;
+    width: 60%;
+    max-width: 850px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.text-content {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 3;
+    max-width: 700px;
+}
+
+.text-content h1 {
+    color: #000;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.text-content p {
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.find-btn {
+    background-color: #FFE600;
+    color: var(--text-dark);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+}
+
+.book-btn {
+    background-color: white;
+    color: var(--text-dark);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Link*/
+
+
+/* Card Layout */
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #FFE600;
+    max-width: 100%;
+    gap: 20px;
+    padding: 5% 20vw;
+}
+
+.info-card {
+    flex: 1;
+    background-color: white;
+    max-width: 280px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    border: 1.5px solid black;
+}
+
+.card-icon {
+    display: block;
+    margin: 0 auto 15px;
+    max-width: 60px;
+    height: auto;
+}
+
+.info-card h1 {
+    color: #000;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-yellow);
+    padding-bottom: 10px;
+}
+
+.info-card p {
+    font-weight: 500;
+    text-align: center;
+    text-indent: 0;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.checker {
+    height: 60px;
+    width: 100%;
+    background: url(images/checker.png);
+    background-repeat: repeat-x;
+    margin: 0;
+    position: relative;
+}
+
+
+
+/* Company Section with Cartoon Taxi */
+.company-section {
+    display: flex;
+    align-items: center;
+    max-width: 80%;
+    margin: 10rem auto;
+    padding: 0 20px;
+    gap: 4rem;
+}
+
+.cartoon-taxi-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.cartoon-taxi {
+    max-width: 100%;
+    height: auto;
+}
+
+.company-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.company-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+    line-height: 1.2;
+}
+
+.company-info p {
+    text-indent: 0;
+    margin-bottom: 25px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.company-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.pricing-btn {
+    background-color: var(--primary-yellow);
+    color: var(--text-dark);
+    border: 1px solid var(--text-dark);
+    font-weight: 600;
+}
+
+.faq-btn {
+    background-color: #f5f5f5;
+    color: var(--text-dark);
+    border: 1px solid #ddd;
+    font-weight: 600;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    max-width: 1200px;
+    margin: 4rem auto;
+    
+    
+}
+
+.reviews {
+    display: flex;
+    padding: 1rem;
+    background-color: #FFF7F0;
+    max-width: 560px;
+    gap: 1rem;
+    border-radius: 20px;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.71);
+}
+
+.ratings {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.stars {
+    max-width: 100px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.footer-nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-logo {
+    max-width: 400px;
+}
+
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .left-side {
+            clip-path: polygon(0 0, 100% 0, 100% 40%, 0 60%);
+        }
+        
+        .taxi {
+            bottom: 10%;
+            left: 50%;
+            width: 60%;
+        }
+        
+        .text-content {
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        
+        .text-content h1 {
+            font-size: 2rem;
+        }
+    
+        /* Responsive company section */
+        .company-section {
+            flex-direction: column;
+            margin-top: 40px;
+            gap: 20px;
+        }
+    
+        .cartoon-taxi-container {
+            order: 1;
+            margin-bottom: 20px;
+        }
+    
+        .company-info {
+            order: 2;
+            text-align: center;
+        }
+    
+        .company-buttons {
+            justify-content: center;
+        }
+    
+        .card-container {
+            flex-direction: column;
+        }
+    }
